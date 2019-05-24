@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+    <record id="previsione_in_out_view" model="ir.ui.view">
+      <field name="name">previsione.in.out.view</field>
+      <field name="model">previsione.in.out</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Cashflow Incassi/Pagamenti" version="8.0">
+        <field name="state" invisible="1"/>
+        <group col="4" string="Inserire Saldo" states="choose">   
+            <field name="data_inizio" required="1"/>
+            <field name="saldo_tot" />
+        </group>
+        <group states="get">   
+            <field name="filename" invisible="1"/>
+            <field name="file" filename="filename" />
+        </group>        
+        <footer states="choose">  
+            <button name="export_report" string="Genera report" type="object" class="oe_highlight"/>
+            <button string="Annulla" special="cancel" />
+        </footer>
+        </form>
+      </field>
+    </record>
+
+    <act_window
+        id="act_previsione_in_out_view"
+        res_model="previsione.in.out"
+        name="Cashflow Incassi/Pagamenti"
+        view_type="form"
+        view_mode="form" 
+        target="new"/>
+
+    <menuitem action="act_previsione_in_out_view" id="menu_act_previsione_in_out_view" parent="account.menu_finance_entries" groups="account.group_account_manager"/>
+				
+
+    </data>
+</openerp>

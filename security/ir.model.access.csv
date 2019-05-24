@@ -1,0 +1,7 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_config_cashflow_base","config.cashflow.base","model_config_cashflow_base","account.group_account_manager",1,1,1,1
+"access_config_cashflow_base_line","config.cashflow.base.line","model_config_cashflow_base_line","account.group_account_manager",1,1,1,1
+"access_divisione_fatturazione_sale","divisione.fatturazione.sale","model_divisione_fatturazione_sale","account.group_account_manager",1,1,1,1
+"access_divisione_fatturazione_purchase","divisione.fatturazione.purchase","model_divisione_fatturazione_purchase","account.group_account_manager",1,1,1,1
+"access_divisione_fatturazione_sale_all","divisione.fatturazione.sale.all","model_divisione_fatturazione_sale",,1,0,0,0
+"access_divisione_fatturazione_purchase_all","divisione.fatturazione.purchase.all","model_divisione_fatturazione_purchase",,1,0,0,0

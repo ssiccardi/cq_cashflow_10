@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>    
+
+
+
+    <record id="view_config_cashflow_tree" model="ir.ui.view">
+      <field name="name">config.cashflow.tree</field>
+      <field name="model">config.cashflow.base</field>
+      <field name="type">tree</field>
+      <field name="arch" type="xml">
+        <tree string="Configurazione Cashflow">
+            <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <record id="view_config_cashflow_form" model="ir.ui.view">
+      <field name="name">config.cashflow.form</field>
+      <field name="model">config.cashflow.base</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <form string="Configurazione Cashflow" version="7.0">
+           <sheet>
+            <h1>
+              <field name="name" class="oe_title"/>
+            </h1>
+            <group>
+              <field name="line_id" >
+                <tree editable="bottom">
+                  <field name="account_id"/>
+                  <field name="type"/>
+                </tree>
+              </field>
+           </group>
+          </sheet>           
+        </form>
+      </field>
+    </record>
+
+    <record id="action_config_cashflow_list" model="ir.actions.act_window">
+      <field name="name">Configurazioni Cashflow</field>
+      <field name="res_model">config.cashflow.base</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem action="action_config_cashflow_list" id="menu_config_cashflow_list" parent="account.menu_finance_configuration"/>
+
+
+	</data>
+</openerp>
